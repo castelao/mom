@@ -73,7 +73,7 @@ module ocean_vert_mix_mod
 !  </DATA> 
 !  <DATA NAME="vert_mix_scheme" TYPE="character">
 !  To determine the vertical mixing scheme: 
-!  "const", "kpp", "kpp_mom4p0","kpp_mom4p1", "chen", "pp", or "gotm".
+!  "const", "kpp_mom4p0","kpp_mom4p1", "chen", "pp", or "gotm".
 !  </DATA> 
 !
 !  <DATA NAME="vert_diff_back_via_max" TYPE="logical">
@@ -301,7 +301,7 @@ private vert_diffuse_watermass_diag
 
 
 ! scheme used to compute the vertical diffusivity and vertical viscosity
-character(len=10) :: vert_mix_scheme='const' ! "const", "kpp", "kpp_mom4p0", "kpp_mom4p1", "pp", "chen", or "gotm"
+character(len=10) :: vert_mix_scheme='const' ! "const", "kpp_mom4p0", "kpp_mom4p1", "pp", "chen", or "gotm"
 integer           :: MIX_SCHEME=1            ! set according to ocean_parameters_mod 
 
 ! aidif=1.0 for implicit vertical mixing and aidif=0.0 for explicit
